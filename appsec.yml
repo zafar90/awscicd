@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "testask:1"
+        LoadBalancerInfo:
+          ContainerName: "webapp"
+          ContainerPort: 80
+
